@@ -1,22 +1,57 @@
 body {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: none;
     font-family: Arial, sans-serif;
     color: #333;
 }
 
 header {
-    border: 3px solid red;
-    border-radius: 5px;
+    background-color: black;
     margin: 20px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    margin: 20px;
+}
+
+.nav-bar {
+    background-color: lightgray;
+    color: white;
+    padding: 10px 0;
     text-align: center;
 }
 
-.container {
+.nav-bar ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 20px;
+}
+
+.nav-bar ul li {
+    display: inline;
+    grid-template-columns: auto auto;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    font-size: 1.1em;
     border: none;
     border-radius: 5px;
-    margin: 10px;
+    padding: 4px;
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,5 +60,59 @@ header {
 }
 
 .about {
-    
+    margin: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgray;
+    color: black;
+    box-shadow: 0 0 15px red;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    margin: 10px;
+    padding: 20px;
+    position: relative;
+    display: inline;
+    grid-template-columns: auto auto;
+    width: 1600px;
+    height: 220px;
+    margin-top: auto;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    margin: 10px;
+}
+
+button {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.dark-theme header, .dark-theme footer {
+    background-color: #222;
+}
+
+.dark-theme article, .dark-theme aside {
+    background-color: #444;
+    color: #f4f4f4;
 }
