@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tela de Login</title>
+        <link rel="stylesheet" href="/CSS/login.css"/>
+    </head>
+    <body>
+        <div class="login-container">
+
+            <form id="login-form" method="post" action="/index.html">
+                <h2>Login Usuário</h2>
+
+                <div class="form-group">
+                    <label for="username">Usuário:</label>
+                    <input type="text" name="username" id="username" required> <br>
+
+                    <label for="password">Senha:</label>
+                    <input type="password" name="password" id="password" required> <br>
+                </div>
+
+                <button type="submit">Logar</button>
+            </form>
+
+            <p id="login-message"></p>
+        </div>
+
+        <script src="/JS/login.js"></script>
+    </body>
+</html>
