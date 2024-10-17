@@ -20,4 +20,21 @@ style.textContent = `
     }
 `;
 
-document.head.appendChild(style);
+const themes = [
+    { background: 'lightblue', color: 'black' },
+    { background: 'lightgray', color: 'black' },
+    { background: 'lightgreen', color: 'black' },
+    { background: 'lightcoral', color: 'white' },
+];
+
+let currentThemeIndex = 0;
+
+document.getElementById("changeTheme").addEventListener("click", function() {
+    // Altera para o próximo tema
+    currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+
+    // Aplica o novo tema com uma transição suave
+    document.body.style.transition = 'background-color 0.5s ease, color 0.5s ease';
+    document.body.style.backgroundColor = themes[currentThemeIndex].background;
+    document.body.style.color = themes[currentThemeIndex].color;
+});

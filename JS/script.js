@@ -21,3 +21,37 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
+//Criação de um LISTENER para clicar na imagem e aparecer um janela e aparecer as informações sobre o computador
+const modal = document.getElementById('infoModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalPrice = document.getElementById('modalPrice');
+const modalDetails = document.getElementById('modalDetails');
+
+function openModal(title, price, details) {
+    modalTitle = textContent = title;
+    modalPrice = textContent = price;
+    modalDetails.innerHTML = details.map(detail => `<li>${detail}</li>`).join('');
+    modal.style.display = "block";
+}
+
+document.querySelector(".close").onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if(event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+document.querySelectorAll('article img').forEach((img) => {
+    img.addEventListener('click', function() {
+        const article = img.closest('article');
+        const title = article.querySelector('h2').textContent;
+        const price = article.querySelector('p').textContent;
+        const details = Array.from(article.querySelector('ol').children).map(li => li.textContent);
+        
+        openModal(title, price, details);
+    });
+});
