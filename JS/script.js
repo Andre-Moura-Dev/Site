@@ -1,3 +1,5 @@
+//Mudar o tema de fundo da página
+
 function toggleTheme() {
     document.body.classList.toggle('dark-theme');
 }
