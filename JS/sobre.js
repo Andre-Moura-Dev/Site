@@ -20,6 +20,7 @@ style.textContent = `
     }
 `;
 
+// Array de cores para controle de botão
 const themes = [
     { background: 'lightblue', color: 'black' },
     { background: 'lightgray', color: 'black' },
@@ -27,7 +28,7 @@ const themes = [
     { background: 'lightcoral', color: 'white' },
 ];
 
-let currentThemeIndex = 0;
+let currentThemeIndex = 0; //Inicialização da variável
 
 document.getElementById("changeTheme").addEventListener("click", function() {
     // Altera para o próximo tema
