@@ -108,7 +108,7 @@ footer {
     display: flex; /*Exibição flexível em relação a página*/
     position: relative;
     bottom: 0;
-    margin-bottom: auto; /*tag footer é empurrada pra baixo*/
+    margin-top: auto; /*tag footer é empurrada pra baixo*/
 }
 
 footer p {
