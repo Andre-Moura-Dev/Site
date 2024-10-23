@@ -105,6 +105,7 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
+    flex-direction: column; /*Direção em coluna para a tag footer*/
     display: flex; /*Exibição flexível em relação a página*/
     position: relative;
     bottom: 0;
