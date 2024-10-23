@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var password = document.getElementById('password').value;
 
         //Tratamento de Erros do login, caso algo esteja errado
-        if(username == 'admin' && password == '896490') {
+        if(username == 'admin' && password == '1234') {
             document.getElementById('login-message').textContent = 'Acesso Garantido';
             document.getElementById('login-message').style.color = 'green';
             alert("Bem vindo Administrador do site.");

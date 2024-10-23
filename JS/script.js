@@ -24,12 +24,13 @@ style.textContent = `
 
 document.head.appendChild(style);
 
-//Criação de um LISTENER para clicar na imagem e aparecer um janela e aparecer as informações sobre o computador
+//Criação de um LISTENER para clicar na imagem e aparecer um janela e aparecer as informações sobre o produto
 const modal = document.getElementById('infoModal');
 const modalTitle = document.getElementById('modalTitle');
 const modalPrice = document.getElementById('modalPrice');
 const modalDetails = document.getElementById('modalDetails');
 
+//Função abrir modal
 function openModal(title, price, details) {
     modalTitle = textContent = title;
     modalPrice = textContent = price;
@@ -43,6 +44,10 @@ document.querySelector(".close").onclick = function() {
 
 window.onclick = function(event) {
     if(event.target == modal) {
+        modal.style.display = "none";
+    }
+
+    else if(event.target != modal) {
         modal.style.display = "none";
     }
 }

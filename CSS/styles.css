@@ -105,9 +105,10 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
+    display: flex; /*Exibição flexível em relação a página*/
     position: relative;
     bottom: 0;
-    width: 100%;
+    margin-bottom: auto; /*tag footer é empurrada pra baixo*/
 }
 
 footer p {
